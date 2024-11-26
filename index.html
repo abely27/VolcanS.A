@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volcan S.A.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/principal.css">
+    <link rel="stylesheet" href="assets/css/contactanos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+    document.addEventListener("click", function (e) {
+const dropdown = document.querySelector(".dropdown-menu");
+const toggle = document.querySelector(".dropdown-toggle");
+
+if (dropdown && toggle) {
+    if (!dropdown.contains(e.target) && !toggle.contains(e.target)) {
+        dropdown.style.display = "none";
+    } else if (toggle.contains(e.target)) {
+        dropdown.style.display =
+            dropdown.style.display === "block" ? "none" : "block";
+    }
+}
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('drawer');
+
+    hamburger.addEventListener('click', () => {
+        drawer.classList.toggle('open'); // Muestra/oculta el menú
+    });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const searchIcon = document.getElementById('search-icon');
+    const searchModal = document.getElementById('search-modal');
+    const searchInput = document.getElementById('search-input');
+    const helpText = document.querySelector('.search-help-text');
+
+    // Mostrar el modal al hacer clic en el ícono
+    searchIcon.addEventListener('click', () => {
+        searchModal.style.display = 'flex'; // Muestra el modal
+        searchInput.value = ''; // Limpia el campo de entrada
+        helpText.style.display = 'block'; // Muestra el mensaje de ayuda
+    });
+
+    // Cerrar el modal al hacer clic fuera del contenedor
+    searchModal.addEventListener('click', (e) => {
+        if (e.target === searchModal) {
+            searchModal.style.display = 'none'; // Oculta el modal
+        }
+    });
+
+    // Ocultar el mensaje de ayuda al escribir
+    searchInput.addEventListener('input', () => {
+        if (searchInput.value.trim() !== '') {
+            helpText.style.display = 'none'; // Oculta el mensaje
+        } else {
+            helpText.style.display = 'block'; // Muestra el mensaje
+        }
+    });
+});
+
+
+</script>
+</head>
+<body>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="navbar-logo">
+        <a href="index.html">
+            <img src="assets/img/Logo blanco.png" alt="Volcan S.A." />
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="dropdown">
+            <a href="#productos" class="dropdown-toggle">Productos</a>
+            <div class="dropdown-menu">
+                <a href="baldes.html">Baldes</a>
+                <a href="cajas.html">Cajas</a>
+                <a href="tapas.html">Tapas FFD</a>
+            </div>
+        </div>
+        <a href="Nosotros.html">Nosotros</a>
+        <a href="Contactanos.html">Contáctanos</a>
+    </div>
+    <div class="navbar-search">
+        <img src="assets/img/blanco_lupa_Mesa de trabajo 1.png" alt="Buscar" id="search-icon" />
+    </div>
+    
+    <!-- Modal de Búsqueda -->
+    <div class="search-modal" id="search-modal">
+        <div class="search-container">
+            <p class="search-help-text">Escribe lo que estás buscando y presiona "Buscar".</p>
+            <input type="text" placeholder="¿Qué estás buscando?" class="search-input" id="search-input" />
+            <button class="search-btn">Buscar</button>
+        </div>
+    </div>
+    
+    
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<!-- Drawer Menu -->
+<div class="drawer" id="drawer">
+    <div class="drawer-header">
+        <img src="assets/img/Logo blanco.png" alt="Volcan S.A." class="drawer-logo">
+        <h2>Volcan S.A.</h2>
+    </div>
+    <ul class="drawer-menu">
+        <li><a href="index.html" > Inicio</a></li>
+        <li><a href="baldes.html">Baldes</a></li>
+        <li><a href="cajas.html">Cajas</a></li>
+        <li><a href="tapas.html">Tapas FFD</a></li>
+        <li><a href="Nosotros.html"> Nosotros</a></li>
+        <li><a href="Contactanos.html"> Contáctanos</a></li>
+    </ul>
+</div>
+    <div class="contenedor">
+        <div class="seccion-principal">
+            <!-- Trapecio de Fondo -->
+            <div class="fondo-trapecio"></div>
+    
+            <!-- Imagen Principal -->
+            <div class="imagen-principal">
+                <img src="assets/img/Inicio/Balde nuevo.png" alt="Imagen principal">
+            </div>
+    
+            <!-- Texto Principal -->
+            <div class="texto-principal">
+                <h1>Somos líderes en soluciones plásticas innovadoras.</h1>
+                <p>Conozca nuestros productos diseñados para liderar el mañana.</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+
+    <div class="contenedor-titulo-externo">
+        <!-- Contenedor interno del título -->
+        <div class="contenedor-titulo-interno">
+            <h1 class="titulo-productos">PRODUCTOS ESTRELLA</h1>
+        </div>
+    </div>
+
+    <div class="contenedor-principal">
+        <div class="contenedor-productos">
+            <!-- Producto 1 -->
+            <div class="producto">
+                <div class="columna-imagen">
+                    <img src="assets/img/Inicio/Balde de 3.5 ltrs.png" alt="Producto 1" class="imagen-producto">
+                </div>
+                <div class="columna-texto">
+                    <p class="descripcion-producto">Tapa hermética a presión, balde inyectado en una sola pieza...</p>
+                    <button class="boton-vermas">Ver más...</button>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto">
+                <div class="columna-imagen">
+                    <img src="assets/img/Inicio/Cajas de Distribución.png" alt="Producto 2" class="imagen-producto">
+                </div>
+                <div class="columna-texto">
+                    <p class="descripcion-producto">Una posición de apilamiento, que cuando está llena permite...</p>
+                    <button class="boton-vermas">Ver más...</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-titulo-externo1">
+        <!-- Contenedor interno del título -->
+        <div class="contenedor-titulo-interno1">
+            <h1 class="titulo-productos1">NOVEDADES EN PRODUCTOS</h1>
+        </div>
+    </div>
+
+    <div class="container-productos">
+        <!-- Card 1 -->
+        <div class="card-producto">
+            <div class="imagen-contenedor">
+                <img src="assets/img/Inicio/Balde nuevo.png" alt="Producto 1">
+            </div>
+            <div class="text-container">
+                <p>Tapa hermética a presión, Asa metálica ergonómica y reforzada...</p>
+                <button class="btn-detalle">Ver más...</button>
+            </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card-producto">
+            <div class="imagen-contenedor">
+                <img src="assets/img/Inicio/Cesta Multiuso.png" alt="Producto 2">
+            </div>
+            <div class="text-container">
+                <p>Una posición de apilamiento, que cuando está llena permite...</p>
+                <button class="btn-detalle">Ver más...</button>
+            </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="card-producto">
+            <div class="imagen-contenedor">
+                <img src="assets/img/Inicio/Tapa.png" alt="Producto 3">
+            </div>
+            <div class="text-container">
+                <p>Tapa circular para alcantarillado de hierro nodular...</p>
+                <button class="btn-detalle">Ver más...</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor Principal -->
+    <div class="seccion-contenedor">
+        <!-- Contenido Principal -->
+        <div class="contenido">
+            <div class="texto-contenedor">
+                <!-- Contenedor del Título -->
+                <div class="titulo-contenedor">
+                  <h2 class="titulo-texto">¿QUIÉNES SOMOS?</h2>
+                </div>
+                <!-- Texto Descriptivo -->
+                <p>
+                  Somos VOLCAN S.A. fundada en 1922, productora de envases y empaques
+                  plásticos industriales de Alta y Baja Densidad. Nos enfocamos en la
+                  calidad y la innovación para satisfacer las demandas del mercado...
+                </p>
+                <!-- Botón -->
+                <button class="btn-detalle">Ver más...</button>
+            </div>
+    
+        <!-- Imagen a la derecha -->
+        <div class="imagen">
+            <img src="assets/img/Inicio/Nosotros in.png" alt="Imagen Descriptiva" class="imagen-derecha">
+        </div>
+        </div>
+    </div>
+    <div class="contenedor-titulo-externo1">
+        <!-- Contenedor interno del título -->
+        <div class="contenedor-titulo-interno1">
+            <h1 class="titulo-productos1">PEDIDOS PERZONALIZADOS</h1>
+        </div>
+    </div>
+    <div class="contenedor1">
+        <!-- Sección Principal -->
+        <div class="seccion-principal1">
+            <!-- Trapecio de Fondo -->
+            <div class="fondo-trapecio1"></div>
+    
+            <!-- Imagen Principal -->
+            <div class="imagen-principal1">
+                <img src="assets/img/Productos/Cajas/Caja Huari.png" alt="Imagen de un producto">
+            </div>
+    
+            <!-- Texto Principal -->
+            <div class="texto-principal1">
+                <p>Ofrecemos <strong>personalizaciones de moldes únicos</strong>, diseñados a la medida de tus necesidades.</p>
+                <p><strong>Nos anticipamos al futuro</strong>, creando soluciones innovadoras para tu éxito.</p>
+                <button class="boton-principal1">Más Información</button>
+            </div>
+        </div>
+    </div>
+    <div class="cotizacion-container">
+        <div class="cotizacion-form">
+            <h2>COTIZA DE FORMA RÁPIDA</h2>
+            <form>
+                <div class="campo izquierda">
+                    <input type="text" placeholder="Nombre completo..." required style="border-radius: 15px 0 15px 0;">
+                </div>
+                <div class="campo derecha">
+                    <input type="email" placeholder="Correo electrónico..." required style="border-radius: 15px 0 15px 0;">
+                </div>
+                <div class="campo izquierda">
+                    <input type="text" placeholder="Nombre del Producto..." required style="border-radius: 15px 0 15px 0;">
+                </div>
+                <div class="campo derecha">
+                    <input type="number" placeholder="Cantidad del producto..." required style="border-radius: 15px 0 15px 0;">
+                </div>
+                <div class="campo centro">
+                    <textarea placeholder="Detalles del producto, dudas, etc..." rows="5" required style="border-radius: 15px 0 15px 0;"></textarea>
+                </div>
+                <p class="nota">Las respuestas pueden demorar entre 24 y 48 horas. Si necesita una respuesta urgente, por favor contáctenos al teléfono.</p>
+                <button type="submit" style="border-radius: 15px 15px 15px 15px;">Enviar</button>
+            </form>
+        </div>
+        <div class="cotizacion-image">
+            <img src="assets/img/nuevo/form_inicio.png" alt="Imagen de documentos">
+        </div>
+    </div>
+    
+    
+    
+    <footer class="footer">
+        <div class="footer-section">
+            <img src="assets/img/Logo_Footer.png" alt="Volcan S.A." class="footer-logo" />
+            <p>Fundada en 1992 garantizando precisión y satisfacción en cada producto.</p>
+            <div class="footer-social">
+                <img src="assets/img/Whatsapp.png" alt="WhatsApp">
+                <img src="assets/img/Facebook.png" alt="Facebook">
+                <img src="assets/img/Insta.png" alt="Instagram">
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Productos</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="baldes.html">Baldes</a></li>
+                <li><a href="cajas.html">Cajas</a></li>
+                <li><a href="tapas.html">Tapas</a></li>
+                <li><a href="Contactanos.html">Contáctanos</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Ponte en contacto</h3>
+            <div class="contact-item">
+                <img src="assets/img/Ubi_footer.png" alt="Ubicación" class="contact-icon">
+                <p>Av. Chacaltaya N1350, La Paz - Bolivia</p>
+            </div>
+            <div class="contact-item">
+                <img src="assets/img/Número_footer.png" alt="Teléfono fijo" class="contact-icon">
+                <p>2-2306304</p>
+            </div>
+            <div class="contact-item">
+                <img src="assets/img/Whatsapp.png" alt="Celular" class="contact-icon">
+                <p>77726800</p>
+            </div>
+            <div class="contact-item">
+                <img src="assets/img/Gmail_footer.png" alt="Correo" class="contact-icon">
+                <p>comercializacion@volcansa.com</p>
+            </div>
+        </div>        
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

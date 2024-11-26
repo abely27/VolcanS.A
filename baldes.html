@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volcan S.A.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/balde.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+    document.addEventListener("click", function (e) {
+const dropdown = document.querySelector(".dropdown-menu");
+const toggle = document.querySelector(".dropdown-toggle");
+
+if (dropdown && toggle) {
+    if (!dropdown.contains(e.target) && !toggle.contains(e.target)) {
+        dropdown.style.display = "none";
+    } else if (toggle.contains(e.target)) {
+        dropdown.style.display =
+            dropdown.style.display === "block" ? "none" : "block";
+    }
+}
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('drawer');
+
+    hamburger.addEventListener('click', () => {
+        drawer.classList.toggle('open'); // Muestra/oculta el menú
+    });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const searchIcon = document.getElementById('search-icon');
+    const searchModal = document.getElementById('search-modal');
+    const searchInput = document.getElementById('search-input');
+    const helpText = document.querySelector('.search-help-text');
+
+    // Mostrar el modal al hacer clic en el ícono
+    searchIcon.addEventListener('click', () => {
+        searchModal.style.display = 'flex'; // Muestra el modal
+        searchInput.value = ''; // Limpia el campo de entrada
+        helpText.style.display = 'block'; // Muestra el mensaje de ayuda
+    });
+
+    // Cerrar el modal al hacer clic fuera del contenedor
+    searchModal.addEventListener('click', (e) => {
+        if (e.target === searchModal) {
+            searchModal.style.display = 'none'; // Oculta el modal
+        }
+    });
+
+    // Ocultar el mensaje de ayuda al escribir
+    searchInput.addEventListener('input', () => {
+        if (searchInput.value.trim() !== '') {
+            helpText.style.display = 'none'; // Oculta el mensaje
+        } else {
+            helpText.style.display = 'block'; // Muestra el mensaje
+        }
+    });
+});
+
+
+</script>
+</head>
+<body>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="navbar-logo">
+        <a href="index.html">
+            <img src="assets/img/Logo blanco.png" alt="Volcan S.A." />
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="dropdown">
+            <a href="#productos" class="dropdown-toggle">Productos</a>
+            <div class="dropdown-menu">
+                <a href="baldes.html">Baldes</a>
+                <a href="cajas.html">Cajas</a>
+                <a href="tapas.html">Tapas FFD</a>
+            </div>
+        </div>
+        <a href="Nosotros.html">Nosotros</a>
+        <a href="Contactanos.html">Contáctanos</a>
+    </div>
+    <div class="navbar-search">
+        <img src="assets/img/blanco_lupa_Mesa de trabajo 1.png" alt="Buscar" id="search-icon" />
+    </div>
+    
+    <!-- Modal de Búsqueda -->
+    <div class="search-modal" id="search-modal">
+        <div class="search-container">
+            <p class="search-help-text">Escribe lo que estás buscando y presiona "Buscar".</p>
+            <input type="text" placeholder="¿Qué estás buscando?" class="search-input" id="search-input" />
+            <button class="search-btn">Buscar</button>
+        </div>
+    </div>
+    
+    
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<!-- Drawer Menu -->
+<div class="drawer" id="drawer">
+    <div class="drawer-header">
+        <img src="assets/img/Logo blanco.png" alt="Volcan S.A." class="drawer-logo">
+        <h2>Volcan S.A.</h2>
+    </div>
+    <ul class="drawer-menu">
+        <li><a href="index.html" > Inicio</a></li>
+        <li><a href="baldes.html">Baldes</a></li>
+        <li><a href="cajas.html">Cajas</a></li>
+        <li><a href="tapas.html">Tapas FFD</a></li>
+        <li><a href="Nosotros.html"> Nosotros</a></li>
+        <li><a href="Contactanos.html"> Contáctanos</a></li>
+    </ul>
+</div>
+    <div class="bucket-section">
+        <div class="bucket-content">
+            <div class="bucket-image">
+                <img src="assets/img/Productos/Baldes/Balde nuevo.png" alt="Balde inclinado">
+            </div>
+            <div class="bucket-text">
+                <h1 class="bucket-title">NUEVO <br> Balde de 18 lts</h1>
+                <ul class="bucket-features">
+                    <li>· Tapa hermética.</li>
+                    <li>· Asa metálica ergonómica.</li>
+                    <li>· Inyectado en una sola pieza.</li>
+                    <li>· Alta resistencia al impacto.</li>
+                    <li>· Apto para almacenamiento de alimentos y líquidos.</li>
+                </ul>
+                <p class="colors-title">En los colores:</p>
+                <div class="bucket-colors">
+                    <span class="color color-white"></span>
+                    <span class="color color-black"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bucket-section-new">
+        <div class="bucket-content-new">
+            <div class="bucket-text-new">
+                <h1 class="bucket-title-new"> Balde de 5 lts.</h1>
+                <ul class="bucket-features-new">
+                    <li>Tapa hermética.</li>
+                    <li>Asa metálica ergonómica.</li>
+                    <li>Inyectado en una sola pieza.</li>
+                    <li>Alta resistencia al impacto.</li>
+                    <li>Apto para almacenamiento de alimentos y líquidos.</li>
+                </ul>
+                <p class="colors-title-new">En los colores:</p>
+                <div class="bucket-colors-new">
+                    <span class="color-new color-white"></span>
+                    <span class="color-new color-green"></span>
+                    <span class="color-new color-yellow"></span>
+                    <span class="color-new color-red"></span>
+                </div>
+            </div>
+            <div class="bucket-image-new">
+                <img src="assets/img/Productos/Baldes/Blade de 4ltr.png" alt="Balde inclinado de 5 litros">
+            </div>
+        </div>
+    </div>
+    <div class="bucket-section">
+        <div class="bucket-content">
+            <div class="bucket-image">
+                <img src="assets/img/Productos/Baldes/Balde de 3.5 ltrs.png" alt="Balde inclinado">
+            </div>
+            <div class="bucket-text">
+                <h1 class="bucket-title"><br> Balde de 4 lts</h1>
+                <ul class="bucket-features">
+                    <li>· Tapa hermética.</li>
+                    <li>· Asa ergonómica reforzada.</li>
+                    <li>· Inyectado en una sola pieza.</li>
+                    <li>· Alta resistencia al impacto.</li>
+                    <li>· Apto para contacto con alimentos.</li>
+                </ul>
+                <p class="colors-title">En los colores:</p>
+                <div class="bucket-colors">
+                    <span class="color color-white"></span>
+                    <span class="color-new color-green"></span>
+                    <span class="color-new color-yellow"></span>
+                    <span class="color-new color-red"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bucket-section-new">
+        <div class="bucket-content-new">
+            <div class="bucket-text-new">
+                <h1 class="bucket-title-new"> Balde de 10 lts.</h1>
+                <ul class="bucket-features-new">
+                    <li>Tapa hermética.</li>
+                    <li>Asa ergonómica reforzada.</li>
+                    <li>Sello de marca.</li>
+                    <li>Alta resistencia al impacto.</li>
+                    <li>Apto para almacenamiento de alimentos y líquidos.</li>
+                </ul>
+                <p class="colors-title-new">En los colores:</p>
+                <div class="bucket-colors-new">
+                    <span class="color-new color-white"></span>
+                    <span class="color-new color-red"></span>
+                    <span class="color-new color-yellow"></span>
+                    <span class="color color-black"></span>
+                </div>
+            </div>
+            <div class="bucket-image-new">
+                <img src="assets/img/Productos/Baldes/Balde de 10 ltrs.png" alt="Balde inclinado de 5 litros">
+            </div>
+        </div>
+    </div>
+
+    <div class="bucket-section">
+        <div class="bucket-content">
+            <div class="bucket-image">
+                <img src="assets/img/Productos/Baldes/Balde de 18 ltrs_.png" alt="Balde inclinado">
+            </div>
+            <div class="bucket-text">
+                <h1 class="bucket-title">Balde de 18 lts</h1>
+                <ul class="bucket-features">
+                    <li>· Tapa hermética.</li>
+                    <li>· Asa ergonómica reforzada.</li>
+                    <li>· Inyectado en una sola pieza.</li>
+                    <li>· Alta resistencia al impacto.</li>
+                    <li>· Apto para contacto con alimentos.</li>
+                </ul>
+                <p class="colors-title">En los colores:</p>
+                <div class="bucket-colors">
+                    <span class="color color-white"></span>
+                    <span class="color-new color-red"></span>
+                    <span class="color-new color-yellow"></span>
+                    <span class="color-new color-green"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+       
+    <footer class="footer">
+        <div class="footer-section">
+            <img src="assets/img/Logo_Footer.png" alt="Volcan S.A." class="footer-logo" />
+            <p>Fundada en 1992 garantizando precisión y satisfacción en cada producto.</p>
+            <div class="footer-social">
+                <img src="assets/img/Whatsapp.png" alt="WhatsApp">
+                <img src="assets/img/Facebook.png" alt="Facebook">
+                <img src="assets/img/Insta.png" alt="Instagram">
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Productos</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="baldes.html">Baldes</a></li>
+                <li><a href="cajas.html">Cajas</a></li>
+                <li><a href="tapas.html">Tapas</a></li>
+                <li><a href="Contactanos.html">Contáctanos</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Ponte en contacto</h3>
+            <div class="contact-item">
+                <img src="assets/img/Ubi_footer.png" alt="Ubicación" class="contact-icon">
+                <p>Av. Chacaltaya N1350, La Paz - Bolivia</p>
+            </div>
+            <div class="contact-item">
+                <img src="assets/img/Número_footer.png" alt="Teléfono fijo" class="contact-icon">
+                <p>2-2306304</p>
+            </div>
+            <div class="contact-item">
+                <img src="assets/img/Whatsapp.png" alt="Celular" class="contact-icon">
+                <p>77726800</p>
+            </div>
+            <div class="contact-item">
+                <img src="assets/img/Gmail_footer.png" alt="Correo" class="contact-icon">
+                <p>comercializacion@volcansa.com</p>
+            </div>
+        </div>        
+    </footer>
+</body>
+</html>

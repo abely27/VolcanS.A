@@ -1,0 +1,653 @@
+.mapa {
+    background-color: #000; /* Fondo negro */
+    padding: 50px 20px;
+    color: #fff;
+}
+
+.mapa-header {
+    background-color: #a10000; /* Fondo rojo oscuro */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.mapa-header h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.mapa-container {
+    max-width: 1000px;
+    margin: 0 auto; /* Centra el mapa */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    border-radius: 8px; /* Bordes redondeados para el mapa */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.mapa-container iframe {
+    width: 100%; /* Asegura que el mapa ocupe todo el contenedor */
+    border: none; /* Sin bordes */
+}
+
+.cotizacion-container {
+    display: flex;
+    background: url('../img/Inicio/Formas/Formulario\ in.png') no-repeat center center; /* Imagen de fondo */
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Ajusta el ancho */
+    max-height: 750px; /* Altura máxima del contenedor */
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+
+.cotizacion-form {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    margin-left: 250px; 
+    font-family: 'Montserrat', Arial, sans-serif; /* Fuente para el formulario */
+    font-weight: 600;
+    width: 80%; /* Controla el ancho del formulario */
+    max-width: 600px; /* Establece un ancho máximo */
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+    margin-left: 25%;
+}
+
+.cotizacion-form h2 {
+    background: url('../img/nuevo/Nosotros\ Somos\ Volcan.png') no-repeat center center; /* Imagen de fondo */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif; /* Fuente para el formulario */
+}
+
+.campo {
+    margin-bottom: 40px; /* Aumentado el margen entre campos */
+    display: flex;
+    font-weight: 600; /* Aumenta el grosor del texto */
+}
+
+.campo input,
+.campo textarea {
+    width: 80%; /* Ajusta el tamaño del campo */
+    padding: 15px;
+    border: none;
+    background: #e0e0e0;
+    font-size: 16px;
+    color: #333;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px 0 15px 0;
+    font-weight: 600;
+}
+
+/* Posición izquierda */
+.campo.izquierda {
+    justify-content: flex-start;
+    margin-left: 0;
+}
+
+/* Posición derecha */
+.campo.derecha {
+    justify-content: flex-end;
+    margin-right: 0;
+}
+.campo.centro {
+    justify-content: center;
+    margin-bottom: 0%;
+    width: 100%;
+}
+
+.campo textarea {
+    width: 100%; /* Ocupa todo el ancho del formulario */
+    height: 150px; /* Campo de detalles más alto */
+    resize: none; /* Evita que el usuario cambie el tamaño */
+    border-radius: 15px 0 15px 0; /* Bordes redondeados como los otros campos */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra interna */
+    background: #e0e0e0;
+    font-size: 16px;
+    color: #333;
+    font-family: 'Montserrat', Arial, sans-serif; /* Fuente para el formulario */
+}
+
+
+
+.cotizacion-form .nota {
+    font-size: 9px; /* Tamaño de letra pequeño */
+    color: #fff; /* Color blanco como el ejemplo */
+    text-align: center; /* Centrado */
+    margin-top: 10px;
+    font-family: 'Montserrat', Arial, sans-serif; /* Fuente para el formulario */
+    font-weight: 100; /* Aumenta el grosor del texto */
+}
+
+.cotizacion-form .nota::before {
+    content: "⚠"; /* Icono de advertencia */
+    font-size: 10px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+
+.cotizacion-form button {
+    width: 30%;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: 40%;
+}
+
+.cotizacion-form button:hover {
+    background: #a71c1c;
+}
+
+.cotizacion-image {
+    flex: 0.6;
+    display: flex;
+    justify-content: right;
+
+}
+
+.cotizacion-image img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.appointment-container {
+    display: flex;
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia */
+    background: url('../img/Inicio/Formas/Formulario\ in.png') no-repeat center center; /* Imagen de fondo */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-height: 750px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.appointment-form {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    margin-left: 50px; 
+    font-family: 'Montserrat', Arial, sans-serif; /* Fuente del formulario */
+    font-weight: 600;
+    font-weight: 600;
+    width: 80%; /* Controla el ancho del formulario */
+    max-width: 600px; /* Establece un ancho máximo */
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+    margin-right: 25%;
+}
+
+.appointment-form h2 {
+     background: url('../img/nuevo/Política\ calidad.png') no-repeat center center; /* Imagen de fondo */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.field {
+    margin-bottom: 40px;
+    display: flex;
+    font-weight: 600;
+}
+
+.field input,
+.field textarea {
+    width: 80%;
+    padding: 15px;
+    border: none;
+    background: #e0e0e0;
+    font-size: 16px;
+    color: #333;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px 0 15px 0;
+    font-weight: 600;
+}
+
+.field.left-align {
+    justify-content: flex-start;
+    margin-left: 0;
+}
+
+.field.right-align {
+    justify-content: flex-end;
+    margin-right: 0;
+}
+
+.field textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    border-radius: 15px 0 15px 0;
+    padding: 15px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background: #e0e0e0;
+    font-size: 16px;
+    color: #333;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.appointment-form .small-text {
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 100;
+}
+
+.appointment-form .small-text::before {
+    content: "⚠";
+    font-size: 10px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.appointment-form button {
+    width: 30%;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 15px 0 15px 0;
+    margin-left: 40%;
+}
+
+.appointment-form button:hover {
+    background: #a71c1c;
+}
+
+.appointment-image {
+    flex: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointment-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 10px 10px 0;
+}
+
+.call-section {
+    width: 100%;
+    background-color: #000; /* Fondo negro para la sección */
+    padding: 20px 0;
+}
+
+.call-header {
+    background: url('../img/nuevo/Nosotros\ Somos\ Volcan.png') no-repeat left center; /* Imagen alineada a la izquierda */
+    background-size: 50%; /* Reduce el tamaño de la imagen */
+    text-align: left; /* Alinea el texto hacia la izquierda */
+    padding: 10px 20px; /* Ajusta el padding para el texto */
+    color: white;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 18px; /* Tamaño más pequeño para el texto */
+    font-weight: 700;
+    border-radius: 5px;
+    margin-bottom: 30px;
+
+}
+
+.call-cards {
+    display: flex;
+    justify-content: space-between; /* Espaciado uniforme sin margen lateral */
+    align-items: flex-start; /* Alineación superior de las tarjetas */
+    gap: 0; /* Sin espacio lateral entre tarjetas */
+}
+
+.call-card {
+    width: 40%; /* Las tarjetas ocupan el 48% del contenedor */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+    transform-origin: center; /* Punto de referencia para la inclinación */
+    color: #000;
+    background-size: cover; /* Asegura que las imágenes cubran todo el fondo */
+    background-position: center center;
+}
+
+/* Específico para la primera tarjeta */
+.card-one {
+    background: url('../img/Inicio/Formas/Contactos\ izquierda.png') no-repeat center center;
+    background-size: contain; /* Escala la imagen sin recorte */
+}
+
+/* Específico para la segunda tarjeta */
+.card-two {
+    background: url('../img/Inicio/Formas/contactos\ derecha.png') no-repeat center center;
+    background-size: contain; /* Escala la imagen sin recorte */
+}
+
+
+.call-card h3 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.call-card p {
+    font-size: 18px;
+    color: #333;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+.up {
+    margin-top: -20px; /* Tarjeta más arriba */
+}
+
+.down {
+    margin-top:250px; /* Tarjeta más abajo */
+}
+
+.contacto-info {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 20px 0; /* Espaciado vertical */
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-bottom: 100px;
+}
+
+.contacto-container p {
+    font-size: 28px; /* Tamaño del texto */
+    font-weight: 600; /* Grosor medio */
+    margin: 0 auto 20px auto; /* Centra el párrafo horizontalmente y agrega espaciado inferior */
+    line-height: 1.0; /* Altura de línea */
+    max-width: 600px; /* Ancho máximo del párrafo */
+    text-align: center; /* Texto centrado */
+}
+
+.contacto-container .divider {
+    width: 40%; /* Longitud de la línea */
+    height: 5px; /* Grosor de la línea */
+    background-color: #fff; /* Color de la línea */
+    margin: 0 auto; /* Centra la línea */
+}
+
+
+/* Estilo responsive para móvil */
+@media (max-width: 768px) {
+    .cotizacion-container {
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra el formulario horizontalmente */
+        justify-content: center; /* Centra el formulario verticalmente */
+        background: url('../img/form_cotizar.png') no-repeat center center; /* Imagen como fondo */
+        background-size: cover; /* Imagen ajustada para cubrir todo */
+        border-radius: 10px;
+        padding: 20px;
+        width: 100%; /* Ocupa todo el ancho */
+        height: auto; /* Altura automática */
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .cotizacion-image {
+        display: none; /* Oculta la imagen como elemento separado */
+    }
+
+    .cotizacion-form {
+        width: 100%; /* Ajusta el ancho del formulario */
+        max-width: 100%; /* Establece un ancho máximo */
+        padding: 20px; /* Espaciado interno */
+        text-align: left; /* Texto alineado a la izquierda */
+        background-color: rgba(0, 0, 0, 0.581); /* Fondo semitransparente para el formulario */
+        border-radius: 10px;
+        color: #fff; /* Texto blanco */
+        margin-left: 0%;
+    }
+
+    .cotizacion-form h2 {
+        font-size: 18px; /* Tamaño del título más pequeño */
+        margin-bottom: 15px;
+        color: #fff; /* Texto blanco */
+        text-align: center;
+    }
+
+    .campo {
+        display: flex;
+        justify-content: flex-start; /* Por defecto, alinea hacia la izquierda */
+        margin-bottom: 20px; /* Espaciado entre campos */
+        width: 100%; /* Los campos ocupan el ancho completo */
+    }
+
+    .campo:nth-child(odd) {
+        justify-content: flex-end; /* Campos intercalados: alineados a la derecha */
+    }
+
+    .campo input,
+    .campo textarea {
+        width: 50%; /* Ajusta el ancho de los campos */
+        padding: 10px; /* Espaciado interno */
+        font-size: 14px; /* Texto más pequeño */
+        background: #f0f0f0; /* Fondo claro */
+        border: none;
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.2); /* Sombra interna */
+    }
+
+    .campo textarea {
+        height: 120px; /* Ajusta la altura del campo de texto */
+    }
+
+    .cotizacion-form .nota {
+        font-size: 12px; /* Texto más pequeño */
+        margin-top: 10px;
+        text-align: center; /* Centrado */
+        color: #fff; /* Texto blanco */
+    }
+    .campo.izquierda {
+        justify-content: normal;
+        margin-left: 20%;
+    }
+    .campo.derecha {
+        justify-content: center;
+        margin-right: 10%;
+    }
+    .campo.centro {
+        justify-content: center;
+    }
+    .cotizacion-form button {
+        width: 40%; /* Botón ocupa todo el ancho */
+        padding: 12px; /* Espaciado interno */
+        font-size: 14px; /* Texto más pequeño */
+        margin-top: 15px;
+        border-radius: 10px; /* Ajuste de bordes */
+        background: #000; /* Fondo negro */
+        color: #fff; /* Texto blanco */
+        cursor: pointer;
+        margin-left: 30%;
+    }
+
+    .cotizacion-form button:hover {
+        background: #a71c1c; /* Color de fondo al pasar el mouse */
+    }
+    .appointment-container {
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra el contenido horizontalmente */
+        justify-content: center; /* Centra el contenido verticalmente */
+        background: url('../img/nuevo/Form.cita.png') no-repeat center center; /* Imagen como fondo */
+        background-size: cover; /* Imagen ajustada para cubrir todo */
+        border-radius: 10px;
+        padding: 20px;
+        width: 100%; /* Ocupa todo el ancho */
+        height: auto; /* Altura automática */
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .appointment-image {
+        display: none; /* Oculta la imagen como elemento separado */
+    }
+    
+    .appointment-form {
+        width: 100%; /* Ajusta el ancho del formulario */
+        max-width: 100%; /* Establece un ancho máximo */
+        padding: 20px; /* Espaciado interno */
+        text-align: left; /* Texto alineado a la izquierda */
+        background-color: rgba(0, 0, 0, 0.581); /* Fondo semitransparente para el formulario */
+        border-radius: 10px;
+        color: #fff; /* Texto blanco */
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    
+    .appointment-form h2 {
+        font-size: 18px; /* Tamaño del título más pequeño */
+        margin-bottom: 15px;
+        color: #fff; /* Texto blanco */
+        text-align: center;
+    }
+    .field.right-align {
+        justify-content: center;
+        margin-right: 20%;
+    }
+    
+    .field.left-align {
+        justify-content: center;
+        margin-left: 0;
+    }
+    .field {
+        display: flex;
+        justify-content: flex-start; /* Por defecto, alinea hacia la izquierda */
+        margin-bottom: 20px; /* Espaciado entre campos */
+        width: 100%; /* Los campos ocupan el ancho completo */
+    }
+    
+    .field:nth-child(odd) {
+        justify-content: center; /* Campos intercalados: alineados a la derecha */
+    }
+    
+    .field input,
+    .field textarea {
+        width: 50%; /* Ajusta el ancho de los campos */
+        padding: 10px; /* Espaciado interno */
+        font-size: 14px; /* Texto más pequeño */
+        background: #f0f0f0; /* Fondo claro */
+        border: none;
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.2); /* Sombra interna */
+    }
+    
+    .field textarea {
+        height: 120px; /* Ajusta la altura del campo de texto */
+    }
+    
+    .appointment-form .small-text {
+        font-size: 12px; /* Texto más pequeño */
+        margin-top: 10px;
+        text-align: center; /* Centrado */
+        color: #fff; /* Texto blanco */
+    }
+    
+    .appointment-form button {
+        width: 40%; /* Ajusta el ancho del botón */
+        padding: 12px; /* Espaciado interno */
+        font-size: 14px; /* Texto más pequeño */
+        margin-top: 15px;
+        border-radius: 10px; /* Bordes redondeados */
+        background: #000; /* Fondo negro */
+        color: #fff; /* Texto blanco */
+        cursor: pointer;
+        margin-left: 30%;
+    }
+    
+    .appointment-form button:hover {
+        background: #a71c1c; /* Color de fondo al pasar el mouse */
+    }
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+    .call-section {
+        padding: 20px;
+        background-color: #000; /* Fondo negro */
+        text-align: center;
+    }
+
+    .call-header {
+        background: #a71c1c; /* Fondo rojo para destacar */
+        color: #fff; /* Texto blanco */
+        font-size: 16px; /* Ajusta el tamaño del texto */
+        font-weight: bold;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        text-align: center; /* Centrado */
+    }
+
+    .call-cards {
+        display: flex;
+        flex-direction: column; /* Apila las tarjetas verticalmente */
+        align-items: center; /* Centra las tarjetas */
+        gap: 20px; /* Espacio entre las tarjetas */
+    }
+
+    .call-card {
+        width: 100%; /* Tarjetas ocupan todo el ancho */
+        max-width: 500px; /* Limita el ancho máximo */
+        padding: 20px; /* Espaciado interno */
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+        text-align: center; /* Texto centrado */
+        font-family: 'Montserrat', Arial, sans-serif;
+        background: #000; /* Fondo negro */
+        color: #fff; /* Texto blanco */
+    }
+
+    .call-card h3 {
+        font-size: 28px; /* Tamaño más grande para el número */
+        font-weight: 800; /* Más grueso */
+        margin-bottom: 10px;
+        color: #fff; /* Número en blanco */
+    }
+
+    .call-card p {
+        font-size: 16px; /* Texto un poco más grande */
+        color: #fff; /* Texto blanco */
+        margin: 0; /* Sin márgenes adicionales */
+        line-height: 1.5;
+    }
+
+    .call-card.skew-left,
+    .call-card.skew-right {
+        transform: none; /* Elimina la inclinación */
+        margin-top: 0; /* Elimina desplazamientos */
+    }
+}

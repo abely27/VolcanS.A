@@ -1,0 +1,856 @@
+/* Contenedor Principal */
+.contenedor {
+    max-width: 100%; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0;
+    position: relative; /* Contendrá elementos absolutos */
+    overflow: hidden; /* Evita que los hijos sobresalgan */
+}
+
+/* Sección Principal */
+.seccion-principal {
+    background-color: #292727; /* Fondo negro */
+    display: flex;
+    align-items: center;
+    height: 70vh; /* Altura completa */
+    position: relative;
+}
+
+/* Trapecio */
+.fondo-trapecio {
+    background: linear-gradient(to bottom, #b80000, #410404); /* Degradado rojo */
+    width: 100%;
+    height: 80%; /* Altura del trapecio */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+    position: absolute; /* Relativo al contenedor */
+    z-index: 1;
+    top: 50%; /* Posición desde la parte superior */
+    transform: translateY(-50%); /* Mueve el trapecio hacia arriba la mitad de su altura */
+}
+
+/* Imagen */
+.imagen-principal {
+    flex: 1; /* Toma una columna completa */
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+}
+
+.imagen-principal img {
+    width: 350px; /* Ajusta el tamaño según lo necesario */
+    object-fit: contain;
+    transform: rotate(10deg); /* Rotación inicial */
+    transition: transform 0.3s ease-in-out, scale 0.3s ease-in-out; /* Suaviza la transición */
+}
+
+.imagen-principal img:hover {
+    transform: rotate(15deg) scale(1.05); /* Rota más y agranda un poco */
+}
+
+/* Texto */
+.texto-principal {
+    flex: 1; /* Toma una columna completa */
+    position: relative;
+    z-index: 3;
+    text-align: left;
+    color: white;
+    padding: 20px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.texto-principal h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: right;
+    margin-right: 10%;
+}
+
+.texto-principal p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: right;
+    margin-right: 10%;
+}
+
+@media (max-width: 768px) {
+    .seccion-principal {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        height: auto; /* Altura automática */
+        align-items: center; /* Centra los elementos horizontalmente */
+        padding: 20px; /* Espaciado interno */
+    }
+
+    .fondo-trapecio {
+        width: 100%;
+        height: 85%; /* Ajusta la altura del triángulo */
+        clip-path: polygon(0 0, 100% 0, 50% 100%); /* Forma el triángulo con la base arriba y la punta abajo */
+        background: linear-gradient(to bottom, #b80000, #410404); /* Degradado para el triángulo */
+        position: absolute;
+        top: 0; /* Posicionado en la parte superior */
+        z-index: 1;
+        transform: translateY(0%);
+    }
+
+    .texto-principal {
+        z-index: 2; /* Asegura que el texto esté sobre el triángulo */
+        text-align: center; /* Centra el texto */
+        margin-left: 50px;
+        margin-top: 20px; /* Espaciado superior */
+        order: 1; /* El texto aparece primero */
+    }
+
+    .texto-principal h1 {
+        font-size: 1.8rem; /* Tamaño más pequeño para el título */
+        margin-bottom: 15px; /* Espaciado entre título y párrafo */
+        text-align: center;
+    }
+
+    .texto-principal p {
+        font-size: 1rem; /* Tamaño más pequeño para el párrafo */
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .imagen-principal {
+        margin-top: 20px; /* Espaciado superior para separar del texto */
+        z-index: 2; /* Asegura que esté sobre el triángulo */
+        width: 100%; /* La imagen ocupa todo el ancho */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 2; /* La imagen aparece después del texto */
+    }
+
+    .imagen-principal img {
+        width: 70%; /* Reduce el tamaño de la imagen */
+        transform: none; /* Sin rotación */
+    }
+}
+
+
+
+
+
+/* Contenedor Principal */
+.contenedor-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #545252; /* Fondo gris claro */
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Contenedor para el título */
+.contenedor-titulo-externo {
+    background-color: #292727; /* Fondo gris oscuro (externo) */
+    padding: 20px;
+    padding-left: 0%;
+    border-radius: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Contenedor interno del título */
+.contenedor-titulo-interno {
+    background-image: url('../img/Inicio/Formas/Hero.png'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Título */
+.titulo-productos {
+    font-size: 36px; /* Letras grandes */
+    color: white; /* Texto blanco para resaltar */
+    margin: 0;
+    text-align: left;
+}
+
+/* Contenedor para el título */
+.contenedor-titulo-externo1 {
+    background-color: #292727; /* Fondo gris oscuro (externo) */
+    padding: 20px;
+    border-radius: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex; /* Activa flexbox */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Contenedor interno del título */
+.contenedor-titulo-interno1 {
+    background-image: url('../img/Hero1.png'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    width: 55%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    max-width: none; /* Elimina cualquier límite de ancho */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: right; /* Texto alineado a la derecha */
+}
+
+
+/* Título */
+.titulo-productos1 {
+    font-size: 36px; /* Letras grandes */
+    color: white; /* Texto blanco para resaltar */
+    margin: 0;
+    margin-left: 20%;
+    text-align: left;
+}
+
+
+/* Contenedor de Productos */
+.contenedor-productos {
+    max-width: 1000px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los productos */
+    align-items: center; /* Centra verticalmente los productos */
+    gap: 20px; /* Espacio entre productos */
+    height: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    padding: 20px; /* Espaciado interno */
+    background-color:#545252; 
+}
+
+
+/* Cada Producto */
+.producto {
+    background-color: #545252; /* Fondo gris claro */
+    display: flex;
+    flex-direction: row; /* Columnas internas en fila */
+    align-items: center;
+    gap: 20px; /* Espacio entre imagen y texto */
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    transition: transform 0.3s ease-in-out; /* Animación suave */
+}
+
+/* Efecto de Rotación para Productos */
+.producto:hover {
+    transform: scale(1.05); /* Zoom */
+}
+
+/* Columna Imagen */
+.columna-imagen {
+    flex: 1; /* Toma el 50% del espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-producto {
+    width: 220px; /* Imagen más grande */
+    height: auto;
+    transition: transform 0.5s ease; /* Rotación suave */
+}
+
+.imagen-producto:hover {
+    transform: rotate(10deg); /* Rotación al pasar el mouse */
+}
+
+/* Columna Texto */
+.columna-texto {
+    flex: 2; /* Toma el 50% del espacio */
+    text-align: center;
+}
+
+.descripcion-producto {
+    font-size: 18px; /* Texto más grande */
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Botón */
+.boton-vermas {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Botón más grande */
+    font-size: 16px; /* Fuente más grande */
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-vermas:hover {
+    background-color: #b80000; /* Cambia a rojo al pasar */
+    transform: scale(1.1); /* Botón ligeramente más grande */
+}
+
+/* Contenedor principal */
+.container-productos {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas */
+    align-items: center; /* Centrado vertical */
+    padding: 25px;
+    gap: 15px; /* Menor espacio entre tarjetas */
+    background-color: #292727; /* Fondo general para resaltar */
+    border-radius: 15px;
+    margin: 20px;
+}
+
+/* Estilo general para cada tarjeta */
+.card-producto {
+    background-image: url('../img/Inicio/Formas/novedades.png'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    background-position: center; /* Centrado de la imagen */
+    border-radius: 10px;
+    width: 30%; /* Aumenta el ancho de las tarjetas */
+    max-width: 320px; /* Aumenta el ancho máximo */
+    height: 480px; /* Aumenta la altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye verticalmente */
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    color: #fff; /* Texto blanco */
+    position: relative;
+}
+
+/* Imagen del producto */
+.imagen-contenedor {
+    width: 100%; /* Ancho máximo */
+    max-height: 360px; /* Aumenta la altura máxima de la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta contenido excedente */
+    margin-bottom: 15px;
+}
+
+.imagen-contenedor img {
+    width: auto; /* Mantiene la proporción */
+    height: 100%; /* Ajusta la altura al contenedor */
+    max-width: 100%; /* No supera el ancho máximo */
+    transform: rotate(+10deg); /* Rotación ligera */
+    transition: transform 0.3s ease, scale 0.3s ease;
+}
+
+.imagen-contenedor img:hover {
+    transform: rotate(0deg) scale(1.1); /* Endereza y agranda al pasar el mouse */
+}
+
+/* Texto descriptivo */
+.text-container p {
+    font-size: 18px; /* Texto grande */
+    margin: 15px 0;
+    color: #000000; /* Texto negro para contraste */
+}
+
+/* Botón */
+.text-container .btn-detalle {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.text-container .btn-detalle:hover {
+    background-color: #333; /* Fondo gris más oscuro */
+    transform: scale(1.1); /* Efecto de hover */
+}
+
+/* Contenedor Principal */
+.seccion-contenedor {
+    background-image: url('../img/Inicio/Formas/quienes\ somos.png'); /* Fondo del contenedor */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
+  }
+  
+  /* Contenedor del Texto y Título */
+.texto-contenedor {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px;
+  }
+  
+  /* Contenedor del Título */
+  .titulo-contenedor {
+    background-image: url('../img/Inicio/Formas/Hero.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .titulo-texto {
+    font-size: 30px; /* Tamaño del texto */
+    font-weight: bold;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Texto descriptivo */
+  .texto-contenedor p {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    line-height: 1.5; /* Altura de línea para mejor legibilidad */
+  }
+  
+  /* Botón */
+  .texto-contenedor .btn-detalle {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px; /* Espacio adicional encima del botón */
+  }
+  
+  .texto-contenedor .btn-detalle:hover {
+    background-color: #333; /* Fondo gris más oscuro */
+    transform: scale(1.1); /* Efecto de hover */
+  }
+  
+  
+  /* Contenido Principal */
+  .contenido {
+    display: flex;
+    justify-content: space-between; /* Imagen a la derecha, texto a la izquierda */
+    align-items: center; /* Centrado vertical */
+    gap: 20px; /* Espacio entre texto e imagen */
+  }
+  
+  /* Imagen */
+  .imagen {
+    flex: 1; /* Ajusta el tamaño proporcionalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagen-derecha {
+    width: 100%; /* Ajusta automáticamente el tamaño */
+    max-width: 500px; /* Ancho máximo */
+    border-radius: 10px;
+  }
+/* Contenedor Principal */
+.contenedor1 {
+    max-width: 100%; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 0px; /* Espaciado interno */
+    position: relative; /* Contendrá elementos absolutos */
+    overflow: hidden; /* Evita que los hijos sobresalgan */
+}
+
+/* Sección Principal */
+.seccion-principal1 {
+    display: flex;
+    align-items: center;
+    height: 70vh; /* Altura de la sección */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Trapecio */
+.fondo-trapecio1 {
+    background: linear-gradient(to bottom, #4f4b4b, #7e7c7c); /* Degradado */
+    width: 100%;
+    height: 80%; /* Altura del trapecio */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+    position: absolute; /* Relativo al contenedor */
+    z-index: 1; /* Fondo detrás de los demás elementos */
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajusta la posición */
+}
+
+/* Imagen */
+.imagen-principal1 {
+    flex: 1;
+    position: relative;
+    z-index: 2; /* Delante del trapecio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-principal1 img {
+    width: 450px;
+    height: auto; /* Mantiene proporciones */
+    object-fit: contain;
+}
+
+/* Texto Principal */
+.texto-principal1 {
+    flex: 2; /* Más espacio para el texto */
+    position: relative;
+    z-index: 3; /* Delante del trapecio */
+    color: white;
+    text-align: center;
+    max-width: 600px; /* Ancho del texto */
+    padding: 20px;
+}
+
+.texto-principal1 h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.texto-principal1 p {
+    font-size: 1.8rem; /* Tamaño del texto */
+    margin-bottom: 12px;
+}
+
+/* Botón */
+.boton-principal1 {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-principal1:hover {
+    background-color: #333; /* Fondo gris oscuro al pasar el mouse */
+    transform: scale(1.1); /* Animación de agrandamiento */
+}
+
+@media (max-width: 768px) {
+    .contenedor-principal {
+        flex-direction: column; /* Apila los productos verticalmente */
+        align-items: center; /* Centra los productos horizontalmente */
+        background-color: #545252; /* Fondo gris */
+        padding: 0px; /* Espaciado interno */
+    }
+
+    .contenedor-productos {
+        display: flex;
+        flex-direction: column; /* Apila los productos en una columna */
+        gap: 20px; /* Espacio entre productos */
+        width: 100%; /* Ocupa todo el ancho */
+        align-items: center; /* Centra los productos */
+    }
+
+    .producto {
+        display: flex;
+        flex-direction: column; /* Apila la imagen y el texto */
+        align-items: center; /* Centra el contenido */
+        background-color: #545252; /* Fondo gris oscuro */
+        border-radius: 10px; /* Bordes redondeados */
+        padding: 20px; /* Espaciado interno */
+        width: 90%; /* Ajusta el ancho */
+        max-width: 400px; /* Máximo ancho para productos */
+    }
+
+    .columna-imagen {
+        margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+    }
+
+    .imagen-producto {
+        width: 80%; /* Imagen más pequeña para móviles */
+        object-fit: contain; /* Asegura que la imagen no se deforme */
+        margin: 0 auto; /* Centra la imagen */
+    }
+
+    .columna-texto {
+        text-align: center;
+        width: 70%; /* Centra el texto */
+    }
+
+    .descripcion-producto {
+        font-size: 1.5rem; /* Tamaño de texto ajustado */
+        color: #fff; /* Texto blanco */
+        margin-bottom: 15px; /* Espaciado inferior */
+    }
+
+    .boton-vermas {
+        display: block;
+        width: 100%; /* Botón ocupa el 80% del contenedor */
+        padding: 10px; /* Espaciado interno */
+        background-color: #000; /* Fondo negro */
+        color: #fff; /* Texto blanco */
+        font-size: 1rem; /* Tamaño de texto ajustado */
+        border: none;
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer;
+        text-align: center; /* Centra el texto dentro del botón */
+    }
+
+    .boton-vermas:hover {
+        background-color: #a71c1c; /* Cambia el fondo al pasar el mouse */
+    }
+
+    .contenedor-titulo-externo {
+        background-color: #a71c1c; /* Fondo gris oscuro */
+        padding: 15px; /* Espaciado interno */
+        margin-bottom: 20px; /* Espacio inferior */
+        text-align: center; /* Centra el título */
+        width: 340px;
+    }
+
+    .contenedor-titulo-interno {
+        background: none; /* Quita la imagen de fondo */
+        padding: 10px; /* Espaciado interno */
+        border-radius: 10px;
+    }
+
+    .titulo-productos {
+        font-size: 1.5rem; /* Tamaño ajustado para el título */
+        color: #fff; /* Texto blanco */
+        font-weight: bold;
+    }
+}
+@media (max-width: 768px) {
+    /* Contenedor del Título */
+    .contenedor-titulo-externo1 {
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center;
+    }
+
+    .contenedor-titulo-interno1 {
+        background-image: url('../img/Inicio/Formas/Hero.png'); /* Imagen de fondo */
+        background-size: cover; /* Imagen cubre todo el contenedor */
+        background-position: center; /* Centrado de la imagen */
+        width: 100%; /* Ancho completo */
+        padding: 15px;
+        border-radius: 10px; /* Bordes redondeados */
+        text-align: center; /* Texto centrado */
+    }
+
+    .titulo-productos1 {
+        font-size: 1.5rem; /* Tamaño ajustado para móviles */
+        color: #fff; /* Texto blanco */
+        font-weight: bold;
+        margin: 0;
+    }
+
+    /* Contenedor Principal */
+    .container-productos {
+        display: flex;
+        flex-direction: column; /* Apila los productos verticalmente */
+        gap: 20px; /* Espacio entre productos */
+        width: 100%; /* Ancho completo */
+        padding: 10px; /* Espaciado interno */
+        background-color: #292727; /* Fondo oscuro */
+    }
+
+    /* Cada tarjeta del producto */
+    .card-producto {
+        background-color: #292727; /* Fondo gris claro */
+        display: flex;
+        flex-direction: column; /* Apila imagen y texto verticalmente */
+        align-items: center;
+        padding: 15px; /* Espaciado interno */
+        border-radius: 10px;
+        width: 100%; /* Ancho completo */
+        max-width: 400px; /* Máximo ancho */
+        margin: 0 auto; /* Centra horizontalmente */
+        margin-bottom: 100px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    }
+
+    /* Contenedor de la imagen */
+    .imagen-contenedor {
+        width: 100%; /* Ancho completo */
+        max-height: 300px; /* Ajusta la altura máxima */
+        display: flex;
+        justify-content: center; /* Centra la imagen horizontalmente */
+        align-items: center;
+        overflow: hidden; /* Oculta contenido excedente */
+        margin-bottom: 15px; /* Espacio entre imagen y texto */
+    }
+
+    .imagen-contenedor img {
+        width: auto; /* Mantiene proporción */
+        height: 100%; /* Ajusta la altura al contenedor */
+        max-width: 100%; /* No supera el ancho */
+        transform: rotate(0deg); /* Sin rotación */
+        transition: transform 0.3s ease, scale 0.3s ease; /* Transición suave */
+    }
+
+    /* Contenedor del texto */
+    .text-container {
+        text-align: center; /* Centra el texto */
+    }
+
+    .text-container p {
+        font-size: 1.5rem; /* Tamaño ajustado para texto */
+        margin-bottom: 15px;
+        color: #fff; /* Texto blanco */
+    }
+
+    /* Botón */
+    .text-container .btn-detalle {
+        background-color: #000; /* Fondo negro */
+        color: #fff; /* Texto blanco */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1rem; /* Texto ajustado */
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Animación */
+        width: 100%; /* Botón ocupa todo el ancho */
+        max-width: 200px; /* Máximo ancho */
+    }
+
+    .text-container .btn-detalle:hover {
+        background-color: #b80000; /* Cambia a rojo en hover */
+        transform: scale(1.1); /* Efecto de agrandamiento */
+    }
+}
+@media (max-width: 768px) {
+    /* Contenedor Principal */
+    .seccion-contenedor {
+        background-image: url('../img/Inicio/Fondo\ responsive\ somos.png'); /* Imagen como fondo */
+        background-size: cover; /* Imagen cubre todo el contenedor */
+        background-position: center; /* Centra la imagen */
+        border-radius: 15px; /* Bordes redondeados */
+        padding: 40px 20px; /* Espaciado interno */
+        margin: 20px; /* Margen exterior */
+        text-align: center; /* Texto centrado */
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        justify-content: center; /* Centra el contenido verticalmente */
+        align-items: center; /* Centra el contenido horizontalmente */
+    }
+
+    /* Título del Contenedor */
+    .titulo-contenedor {
+        background-image: url('../img/Inicio/Formas/Hero.png'); /* Imagen de fondo para el título */
+        background-size: cover; /* Imagen cubre el contenedor del título */
+        background-position: center; /* Centra la imagen */
+        padding: 15px; /* Espaciado interno */
+        border-radius: 10px; /* Bordes redondeados */
+        text-align: center; /* Texto centrado */
+        width: 90%; /* Ancho máximo */
+        margin-bottom: 20px; /* Espacio debajo del título */
+    }
+
+    .titulo-texto {
+        font-size: 2rem; /* Tamaño del texto */
+        font-weight: bold;
+        color: white; /* Texto blanco */
+        margin: 0;
+    }
+
+    /* Texto descriptivo */
+    .texto-contenedor {
+        text-align: center; /* Texto centrado */
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra el contenido */
+        justify-content: center; /* Centra verticalmente */
+        gap: 20px; /* Espacio entre el texto y otros elementos */
+        padding: 20px;
+    }
+
+    .texto-contenedor p {
+        font-size: 1.5rem; /* Texto grande */
+        color: white; /* Texto blanco */
+        margin: 0; /* Sin márgenes adicionales */
+        line-height: 1.5; /* Espaciado entre líneas */
+    }
+
+    /* Ocultar la imagen derecha */
+    .imagen {
+        display: none; /* Oculta la imagen */
+    }
+
+    /* Botón oculto (si aplica) */
+    .texto-contenedor .btn-detalle {
+        display: none; /* Oculta el botón en la versión móvil */
+    }
+}
+@media (max-width: 768px) {
+    /* Contenedor Principal */
+    .contenedor1 {
+        background-color: #545252; /* Fondo gris */
+        border-radius: 15px; /* Bordes redondeados */
+        padding: 20px; /* Espaciado interno */
+        margin: 20px; /* Espaciado externo */
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        text-align: center; /* Texto centrado */
+        height: auto; /* Altura automática ajustada */
+        min-height: 200px; /* Altura mínima */
+        margin-bottom: 100px;
+        height: 40vh;
+    }
+
+    /* Ocultar la imagen */
+    .imagen-principal1 {
+        display: none; /* Oculta la imagen */
+    }
+
+    /* Texto Principal */
+    .texto-principal1 {
+        color: white; /* Texto blanco */
+        max-width: 90%; /* Ajusta el ancho del texto */
+        padding: 10px; /* Espaciado interno */
+    }
+
+    .texto-principal1 p {
+        font-size: 1.5rem; /* Texto grande */
+        margin-bottom: 10px; /* Espaciado entre párrafos reducido */
+        line-height: 1.4; /* Altura de línea ajustada */
+    }
+
+    .texto-principal1 strong {
+        font-weight: bold; /* Resaltar texto en negrita */
+    }
+
+    /* Botón */
+    .boton-principal1 {
+        background-color: #000; /* Fondo negro */
+        color: #fff; /* Texto blanco */
+        border: none;
+        border-radius: 5px; /* Bordes redondeados */
+        padding: 10px 20px; /* Espaciado interno reducido */
+        font-size: 1rem; /* Tamaño del texto más pequeño */
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+        margin-top: 10px; /* Espacio superior reducido */
+    }
+
+    .boton-principal1:hover {
+        background-color: #333; /* Fondo gris oscuro al pasar el mouse */
+        transform: scale(1.1); /* Efecto de agrandamiento */
+    }
+
+    /* Fondo del trapecio */
+    .fondo-trapecio1 {
+        display: none; /* Oculta el trapecio */
+    }
+}

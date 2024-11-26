@@ -1,0 +1,414 @@
+/* General styles */
+body {
+    background-color: #ffffff; /* Fondo negro para toda la página */
+    color: #000000; /* Texto blanco para visibilidad */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* General styles for Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px; /* Espaciado más amplio */
+    background-color: #ffffff; /* Color oscuro para la barra */
+}
+
+.navbar-logo img {
+    height: 70px; /* Tamaño más grande del logo */
+}
+
+/* Menu Styles */
+.navbar-menu {
+    display: flex;
+    gap: 80px; /* Mayor separación entre los enlaces */
+}
+
+.navbar-menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 26px; /* Letras más grandes */
+    font-weight: bold;
+    letter-spacing: 2px; /* Más espacio entre las letras */
+    position: relative;
+}
+
+.navbar-menu a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle:hover + .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #ffffff; /* Fondo gris oscuro */
+    padding: 10px 20px;
+    border-radius: 0; /* Bordes cuadrados */
+    z-index: 1000;
+    width: 150px; /* Cambia el ancho aquí para hacerlo más grande */
+    min-width: 250px; /* Asegura que el menú sea al menos de este ancho */
+}
+
+.dropdown-menu a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 10px 0; /* Espaciado entre las opciones */
+    font-size: 20px; /* Letras más grandes en la lista */
+    font-weight: normal;
+}
+
+.dropdown-menu a:hover {
+    text-decoration: underline;
+    color: #ffffff; /* Cambia a rojo al pasar el mouse */
+}
+
+
+/* Hamburger Icon */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 20;
+    position: absolute; /* Permite posicionarlo de forma precisa */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la izquierda */
+}
+
+
+.hamburger span {
+    background-color: rgb(0, 0, 0);
+    height: 5px;
+    width: 30px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Drawer Menu */
+.drawer {
+    width: 250px;
+    background-color: #ffffff; /* Fondo oscuro */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente oculto fuera de la pantalla */
+    z-index: 1000;
+    overflow-y: auto;
+    transition: left 0.3s ease; /* Transición suave al mostrar/ocultar */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Drawer Header */
+.drawer-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #410404; /* Fondo rojo oscuro */
+    color: white;
+    text-align: center;
+}
+
+.drawer-header .drawer-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Drawer Menu Items */
+.drawer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.drawer-menu li {
+    margin: 10px 0;
+}
+
+.drawer-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.drawer-menu li a:hover,
+.drawer-menu li a.active {
+    background-color: #b80000; /* Fondo rojo para la pestaña activa */
+}
+
+.drawer-menu li img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Drawer Open State */
+.drawer.open {
+    left: 0; /* Desplaza el menú hacia la pantalla */
+}
+
+/* Responsive Styles */
+@media (min-width: 769px) {
+    .drawer {
+        display: none; /* Oculta el menú en pantallas grandes */
+    }
+
+    .hamburger {
+        display: none; /* Oculta el ícono hamburguesa en escritorio */
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-menu,
+    .navbar-search {
+        display: none; /* Oculta el menú y búsqueda en móviles */
+    }
+
+    .hamburger {
+        display: flex; /* Muestra el ícono de menú hamburguesa */
+    }
+
+    .mobile-menu {
+        display: none; /* Inicialmente oculto */
+    }
+
+    .mobile-menu.active {
+        display: flex; /* Muestra el menú al activarse */
+    }
+}
+
+
+/* Footer Styles */
+.footer {
+    position: relative;
+    background-color: #f0f0f0; /* Fondo gris */
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    clip-path: polygon(0 0, 98% 0, 90% 100%, 0 100%);
+    border-radius: 0 0 50px 50px; /* Redondeo inferior */
+    color: #000;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-social img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-section h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-icon {
+    width: 24px; /* Ancho de las imágenes */
+    height: 24px; /* Alto de las imágenes */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.contact-item p {
+    font-size: 16px; /* Tamaño del texto */
+    margin: 0; /* Elimina márgenes alrededor del texto */
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Pantallas menores a 768px */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Poner los elementos en columna */
+        padding: 20px; /* Reducir espacio interno */
+    }
+
+    .navbar-menu {
+        flex-direction: column; /* Menú en columna */
+        align-items: center;
+        gap: 15px; /* Reducir espacio entre enlaces */
+    }
+
+    .navbar-menu a {
+        font-size: 18px; /* Tamaño más pequeño para móviles */
+    }
+
+    .navbar-logo img {
+        height: 50px; /* Reducir tamaño del logo */
+    }
+
+    .navbar-search img {
+        height: 25px; /* Reducir tamaño del ícono */
+    }
+
+    .footer {
+        flex-direction: column; /* Los elementos del footer en columna */
+        padding: 20px; /* Reducir espacio interno */
+        clip-path: none; /* Elimina la figura en pantallas pequeñas */
+        border-radius: 0; /* Elimina el borde redondeado */
+    }
+
+    .footer-section {
+        margin-right: 0; /* Elimina el espacio derecho */
+        margin-bottom: 20px; /* Espacio entre secciones */
+        text-align: center; /* Centra el texto */
+    }
+
+    .footer-logo {
+        height: 40px; /* Tamaño reducido para el logo */
+    }
+
+    .footer-social {
+        justify-content: center; /* Centra los íconos sociales */
+    }
+
+    .footer-social img {
+        height: 25px; /* Tamaño reducido de los íconos */
+        width: 25px;
+    }
+
+    .footer-section ul li a {
+        font-size: 16px; /* Ajusta el tamaño de los enlaces */
+    }
+}
+
+/* Pantallas menores a 480px */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px; /* Ajusta el espacio interno */
+    }
+
+    .navbar-menu a {
+        font-size: 16px; /* Tamaño reducido para enlaces */
+    }
+
+    .footer {
+        padding: 15px; /* Menor espacio en el footer */
+    }
+
+    .footer-section h3 {
+        font-size: 16px; /* Reducir tamaño de los títulos */
+    }
+
+    .footer-section ul li a {
+        font-size: 14px; /* Ajustar el tamaño del texto en móviles pequeños */
+    }
+}
+
+
+/* Estilos para la barra de búsqueda */
+.navbar-search img {
+    cursor: pointer;
+    width: 50px; /* Ajusta el tamaño según tu diseño */
+    transition: transform 0.3s ease;
+}
+
+.navbar-search img:hover {
+    transform: scale(1.1); /* Efecto de hover */
+}
+
+/* Estilos para el modal */
+.search-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-input:focus {
+    border-color: #000;
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volcan S.A.</title>
+    <link rel="stylesheet" href="style_blanco.css">
+    <link rel="stylesheet" href="assets/css/cajas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("click", function (e) {
+    const dropdown = document.querySelector(".dropdown-menu");
+    const toggle = document.querySelector(".dropdown-toggle");
+    
+    if (dropdown && toggle) {
+        if (!dropdown.contains(e.target) && !toggle.contains(e.target)) {
+            dropdown.style.display = "none";
+        } else if (toggle.contains(e.target)) {
+            dropdown.style.display =
+                dropdown.style.display === "block" ? "none" : "block";
+        }
+    }
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const drawer = document.getElementById('drawer');
+    
+        hamburger.addEventListener('click', () => {
+            drawer.classList.toggle('open'); // Muestra/oculta el menú
+        });
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchIcon = document.getElementById('search-icon');
+        const searchModal = document.getElementById('search-modal');
+        const searchInput = document.getElementById('search-input');
+        const helpText = document.querySelector('.search-help-text');
+    
+        // Mostrar el modal al hacer clic en el ícono
+        searchIcon.addEventListener('click', () => {
+            searchModal.style.display = 'flex'; // Muestra el modal
+            searchInput.value = ''; // Limpia el campo de entrada
+            helpText.style.display = 'block'; // Muestra el mensaje de ayuda
+        });
+    
+        // Cerrar el modal al hacer clic fuera del contenedor
+        searchModal.addEventListener('click', (e) => {
+            if (e.target === searchModal) {
+                searchModal.style.display = 'none'; // Oculta el modal
+            }
+        });
+    
+        // Ocultar el mensaje de ayuda al escribir
+        searchInput.addEventListener('input', () => {
+            if (searchInput.value.trim() !== '') {
+                helpText.style.display = 'none'; // Oculta el mensaje
+            } else {
+                helpText.style.display = 'block'; // Muestra el mensaje
+            }
+        });
+    });
+    
+    
+    </script>
+    </head>
+    <body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <a href="index.html">
+                <img src="assets/img/Logo Negro.png" alt="Volcan S.A." />
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="dropdown">
+                <a href="#productos" class="dropdown-toggle">Productos</a>
+                <div class="dropdown-menu">
+                    <a href="baldes.html">Baldes</a>
+                    <a href="cajas.html">Cajas</a>
+                    <a href="tapas.html">Tapas FFD</a>
+                </div>
+            </div>
+            <a href="Nosotros.html">Nosotros</a>
+            <a href="Contactanos.html">Contáctanos</a>
+        </div>
+        <div class="navbar-search">
+            <img src="assets/img/negro_lupa_Mesa de trabajo 1.png" alt="Buscar" id="search-icon" />
+        </div>
+        
+        <!-- Modal de Búsqueda -->
+        <div class="search-modal" id="search-modal">
+            <div class="search-container">
+                <p class="search-help-text">Escribe lo que estás buscando y presiona "Buscar".</p>
+                <input type="text" placeholder="¿Qué estás buscando?" class="search-input" id="search-input" />
+                <button class="search-btn">Buscar</button>
+            </div>
+        </div>
+        
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <!-- Drawer Menu -->
+    <div class="drawer" id="drawer">
+        <div class="drawer-header">
+            <img src="assets/img/Logo blanco.png" alt="Volcan S.A." class="drawer-logo">
+            <h2>Volcan S.A.</h2>
+        </div>
+        <ul class="drawer-menu">
+            <li><a href="index.html" > Inicio</a></li>
+            <li><a href="baldes.html">Baldes</a></li>
+            <li><a href="cajas.html">Cajas</a></li>
+            <li><a href="tapas.html">Tapas FFD</a></li>
+            <li><a href="Nosotros.html"> Nosotros</a></li>
+            <li><a href="Contactanos.html"> Contáctanos</a></li>
+        </ul>
+    </div>
+    <div class="bucket-section-new">
+        <div class="bucket-content-new">
+            <div class="bucket-text-new">
+                <h1 class="bucket-title-new">Caja de Distribucion</h1>
+                <ul class="bucket-features-new">
+                    <li>· 2 posciones de apilamiento.</li>
+                    <li>· Llena: protege contenido.</li>
+                    <li>· Vacia:giro 180 y encastra, ahorra </li>
+                    <li>55% de espacio.</li>
+                    <li>· Alta resistencia al impacto.</li>
+                </ul>
+                <p class="colors-title-new">En los colores:</p>
+                <div class="bucket-colors-new">
+                    <span class="color-new color-orange"></span>
+                    <span class="color-new color-green"></span>
+                    <span class="color-new color-yellow"></span>
+                    <span class="color-new color-red"></span>
+                </div>
+            </div>
+            <div class="bucket-image-new">
+                <img src="assets/img/Productos/Cajas/Cajas de Distribución.png" alt="Balde inclinado de 5 litros">
+            </div>
+        </div>
+    </div>
+    <div class="bucket-section">
+        <div class="bucket-content">
+            <div class="bucket-image">
+                <img src="assets/img/Productos/Cajas/Cesta Multiuso.png" alt="Balde inclinado">
+            </div>
+            <div class="bucket-text">
+                <h1 class="bucket-title">Cesta Multiuso</h1>
+                <ul class="bucket-features">
+                    <li>· Llena: protege contenido.</li>
+                    <li>· 2 posciones de apilamiento.</li>
+                    <li>· Inyectado en una sola pieza.</li>
+                    <li>· Alta resistencia al impacto.</li>
+                    <li>· Vacia: giro 180 y encastra ahorra 55%.</li>
+                </ul>
+                <p class="colors-title">En los colores:</p>
+                <div class="bucket-colors">
+                    <span class="color color-white"></span>
+                    <span class="color-new color-green"></span>
+                    <span class="color-new color-yellow"></span>
+                    <span class="color-new color-red"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bucket-section-new">
+        <div class="bucket-content-new">
+            <div class="bucket-text-new">
+                <h1 class="bucket-title-new">Caja CNB</h1>
+                <ul class="bucket-features-new">
+                    <li>· Inyectado en una pieza sin costuras.</li>
+                    <li>· Interior y fondo liso.</li>
+                    <li>· Liviana y facil de manipular.</li>
+                    <li>· Alta resistencia al impacto.</li>
+                    <li>· Capacidad: 12 unidades.</li>
+                </ul>
+                <p class="colors-title-new">En los colores:</p>
+                <div class="bucket-colors-new">
+                    <span class="color-new color-white"></span>
+                    <span class="color-new color-red"></span>
+                    <span class="color-new color-yellow"></span>
+                    <span class="color color-black"></span>
+                </div>
+            </div>
+            <div class="bucket-image-new">
+                <img src="assets/img/Productos/Cajas/CNB.png" alt="Balde inclinado de 5 litros">
+            </div>
+        </div>
+    </div>
+
+    <div class="bucket-section">
+        <div class="bucket-content">
+            <div class="bucket-image">
+                <img src="assets/img/Productos/Cajas/Caja Huari.png" alt="Balde inclinado">
+            </div>
+            <div class="bucket-text">
+                <h1 class="bucket-title">Caja huari</h1>
+                <ul class="bucket-features">
+                    <li>· Inyectado en una pieza sin costuras.</li>
+                    <li>· Interior y fondo liso.</li>
+                    <li>· Liviana y facil de manipular.</li>
+                    <li>· Apilable:7 unidades con contenido.</li>
+                    <li>· Capacidad: 12 unidades.</li>
+                </ul>
+                <p class="colors-title">En los colores:</p>
+                <div class="bucket-colors">
+                    <span class="color color-white"></span>
+                    <span class="color-new color-green"></span>
+                    <span class="color-new color-yellow"></span>
+                    <span class="color-new color-red"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-section">
+            <img src="assets/img/Logo_Footer.png" alt="Volcan S.A." class="footer-logo" />
+            <p>Fundada en 1992 garantizando precisión y satisfacción en cada producto.</p>
+            <div class="footer-social">
+                <img src="assets/img/Whatsapp.png" alt="WhatsApp">
+                <img src="assets/img/Facebook.png" alt="Facebook">
+                <img src="assets/img/Insta.png" alt="Instagram">
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Productos</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="baldes.html">Baldes</a></li>
+                <li><a href="cajas.html">Cajas</a></li>
+                <li><a href="tapas.html">Tapas</a></li>
+                <li><a href="Contactanos.html">Contáctanos</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Ponte en contacto</h3>
+            <div class="contact-item">
+                <img src="assets/img/Ubi_footer.png" alt="Ubicación" class="contact-icon">
+                <p>Av. Chacaltaya N1350, La Paz - Bolivia</p>
+            </div>
+            <div class="contact-item">
+                <img src="assets/img/Número_footer.png" alt="Teléfono fijo" class="contact-icon">
+                <p>2-2306304</p>
+            </div>
+            <div class="contact-item">
+                <img src="assets/img/Whatsapp.png" alt="Celular" class="contact-icon">
+                <p>77726800</p>
+            </div>
+            <div class="contact-item">
+                <img src="assets/img/Gmail_footer.png" alt="Correo" class="contact-icon">
+                <p>comercializacion@volcansa.com</p>
+            </div>
+        </div>        
+    </footer>
+</body>
+</html>

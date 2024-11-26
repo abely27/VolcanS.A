@@ -1,0 +1,475 @@
+.bucket-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambiar de height a min-height para que respete los márgenes */
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/Productos/Cajas/Formas/cajas\ de.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    margin: 50px 0; /* Margen superior e inferior de 50px */
+}
+
+.bucket-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    padding: 20px;
+    color: #000;
+}
+
+.bucket-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bucket-image img {
+    max-width: 80%;
+    transform: rotate(-15deg);
+    object-fit: contain;
+}
+
+.bucket-text {
+    flex: 1;
+    text-align: left;
+    position: relative;
+    color: #ffffff; /* Cambiará a negro puro */
+    font-family: 'Montserrat', sans-serif; /* Usar Arial o fuente similar */
+}
+
+.bucket-title {
+    font-size: 3.1em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+}
+
+.bucket-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #ffffff; /* Texto gris claro */
+}
+
+/* Efecto escalera */
+.bucket-features li {
+    margin-bottom: 0.5rem;
+    opacity: 0.9; /* Para darle un aspecto sutil */
+    transform: translateY(0); /* Posición inicial */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+}
+
+.bucket-features li:nth-child(1) {
+    transform: translateX(10px); /* Línea superior ligeramente desplazada */
+}
+.bucket-features li:nth-child(2) {
+    transform: translateX(20px); /* Segunda línea más abajo */
+}
+.bucket-features li:nth-child(3) {
+    transform: translateX(30px); /* Tercer línea más abajo */
+}
+.bucket-features li:nth-child(4) {
+    transform: translateX(40px); /* Cuarta línea más abajo */
+}
+.bucket-features li:nth-child(5) {
+    transform: translateX(50px); /* Última línea */
+}
+
+
+/* Círculos de colores */
+.colors-title {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-left: 75px;
+}
+
+.bucket-colors {
+    display: flex;
+    gap: 15px;
+    margin-top: 0.5rem;
+    margin-left: 75px;
+}
+
+.color {
+    width: 50px; /* Tamaño ajustado */
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #000; /* Grosor del borde negro */
+}
+
+.color-white {
+    background-color: #fff;
+}
+
+.color-black {
+    background-color: #000;
+}
+
+.bucket-section-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima para respetar márgenes */
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/Productos/Cajas/Formas/cajas\ iz.png'); /* Nueva imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    margin: 60px 0; /* Margen superior e inferior */
+}
+
+.bucket-content-new {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    padding: 25px;
+    color: #000;
+}
+
+.bucket-image-new {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Imagen al lado derecho */
+}
+
+.bucket-image-new img {
+    max-width: 70%; /* Ajuste al nuevo diseño */
+    transform: rotate(10deg); /* Nueva inclinación */
+    object-fit: contain;
+}
+
+.bucket-text-new {
+    flex: 1;
+    text-align: right; /* Texto alineado a la derecha */
+    position: relative;
+    color: #ffffff; /* Color negro */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bucket-title-new {
+    font-size: 3.0em; /* Tamaño ajustado para el nuevo diseño */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    margin-left: 10%;
+}
+
+.bucket-features-new {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #fffbfb;
+}
+
+/* Efecto escalera - Nueva sección */
+.bucket-features-new li {
+    margin-bottom: 0.7rem;
+    opacity: 0.9;
+    transform: translateY(0);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bucket-features-new li:nth-child(1) {
+    transform: translateX(-10px); /* Inversión del desplazamiento */
+}
+.bucket-features-new li:nth-child(2) {
+    transform: translateX(-20px);
+}
+.bucket-features-new li:nth-child(3) {
+    transform: translateX(-30px);
+}
+.bucket-features-new li:nth-child(4) {
+    transform: translateX(-40px);
+}
+.bucket-features-new li:nth-child(5) {
+    transform: translateX(-50px);
+}
+
+/* Círculos de colores */
+.colors-title-new {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 75px; /* Ajuste de margen derecho */
+}
+
+.bucket-colors-new {
+    display: flex;
+    gap: 20px;
+    margin-top: 0.5rem;
+    margin-right: 200px;
+}
+
+.color-new {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.color-green {
+    background-color: #008000;
+}
+
+.color-yellow {
+    background-color: #FFD700;
+}
+
+.color-red {
+    background-color: #FF0000;
+}
+.color-orange {
+    background-color: #ff4d00;
+}
+
+/* Estilo responsive para móvil */
+@media (max-width: 768px) {
+    .bucket-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('../img/Inicio/Formas/novedades.png'); /* Imagen de fondo */
+        background-size: cover; /* La imagen cubre todo el contenedor */
+        background-position: center; /* Centrado de la imagen */
+        border-radius: 10px; /* Bordes redondeados */
+        width: 95%; /* Ancho ajustado */
+        max-width: 400px; /* Máximo ancho */
+        padding: 20px;
+        text-align: left; /* Alinea el texto a la izquierda */
+        color: #fff; /* Texto blanco */
+        margin: 10px auto; /* Reduce el margen inferior */
+        overflow: hidden;
+        position: relative;
+    }
+
+    .bucket-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinea todo el contenido a la izquierda */
+        justify-content: flex-start;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Imagen del producto */
+    .bucket-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px; /* Reduce el margen inferior */
+    }
+
+    .bucket-image img {
+        max-width: 85%; /* Ajusta el tamaño de la imagen */
+        transform: none; /* Elimina cualquier transformación */
+        object-fit: contain;
+    }
+
+    /* Fondo que cubre desde la imagen hasta el final */
+    .bucket-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para resaltar la imagen */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); /* Forma diagonal del fondo */
+    }
+
+    /* Texto alineado a la izquierda con translate */
+    .bucket-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 0; /* Sin margen adicional */
+        width: 100%;
+        transform: translateX(0); /* Ajuste para alineación precisa */
+    }
+
+    .bucket-title {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 5px; /* Reduce el margen inferior */
+        color: #fff;
+        text-align: left; /* Alinea el título a la izquierda */
+        transform: translateX(0); /* Asegura alineación a la izquierda */
+    }
+
+    .bucket-features {
+        font-size: 0.9em;
+        line-height: 1.5;
+        margin-bottom: 10px; /* Reduce el margen inferior */
+        color: #fff;
+        padding-left: 0; /* Elimina cualquier indentación */
+        list-style: none; /* Quita los puntos de la lista si es necesario */
+        text-align: left; /* Alinea el texto a la izquierda */
+        transform: translateX(0); /* Alinea toda la lista a la izquierda */
+    }
+
+    .bucket-features li {
+        margin: 0; /* Sin márgenes adicionales */
+        text-align: left; /* Asegura que cada elemento esté alineado a la izquierda */
+        transform: translateX(0) !important; /* Alinea cada elemento con translate */
+    }
+
+    .colors-title {
+        font-size: 0.9em;
+        margin-bottom: 5px; /* Reduce el margen inferior */
+        text-align: left; /* Alinea el texto a la izquierda */
+        transform: translateX(0); /* Alinea el título de colores */
+    }
+
+    .bucket-colors {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start; /* Alinea los círculos de colores a la izquierda */
+    }
+
+    .color {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+    }
+
+    .color-white {
+        background-color: #fff;
+    }
+
+    .color-black {
+        background-color: #000;
+    }
+}
+/* Estilo responsive para móvil */
+@media (max-width: 768px) {
+    .bucket-section-new {
+        display: flex;
+        flex-direction: column; /* Organiza todo en columna */
+        align-items: center;
+        justify-content: flex-start;
+        background-image: url('../img/Inicio/Formas/novedades.png'); /* Imagen de fondo */
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px; /* Bordes redondeados */
+        width: 95%; /* Ajusta el ancho */
+        max-width: 400px; /* Ancho máximo para móviles */
+        padding: 20px;
+        text-align: left; /* Texto alineado a la izquierda */
+        color: #fff; /* Texto blanco */
+        margin: 10px auto; /* Márgenes superior e inferior ajustados */
+        overflow: hidden;
+        position: relative;
+    }
+
+    .bucket-content-new {
+        display: flex;
+        flex-direction: column; /* Coloca todo en columna */
+        align-items: flex-start; /* Contenido alineado a la izquierda */
+        justify-content: flex-start;
+        width: 100%;
+        position: relative;
+    }
+
+    /* Imagen del producto */
+    .bucket-image-new {
+        display: flex;
+        justify-content: center; /* Imagen centrada horizontalmente */
+        width: 100%;
+        order: -1; /* Mueve la imagen al inicio de la tarjeta */
+        margin-bottom: 15px; /* Espacio entre imagen y texto */
+    }
+
+    .bucket-image-new img {
+        max-width: 85%; /* Ajusta el tamaño de la imagen */
+        transform: none; /* Elimina cualquier inclinación */
+        object-fit: contain;
+    }
+
+    /* Texto alineado con translate y color blanco */
+    .bucket-text-new {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinea el texto a la izquierda */
+        justify-content: flex-start;
+        margin-left: 0; /* Sin margen adicional */
+        width: 100%;
+        transform: translateX(0); /* Asegura alineación precisa */
+        color: #fff; /* Texto blanco */
+    }
+
+    .bucket-title-new {
+        font-size: 1.8em; /* Tamaño ajustado para móvil */
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #fff; /* Título en blanco */
+        text-align: left; /* Alinea el título a la izquierda */
+        transform: translateX(0); /* Asegura alineación izquierda */
+    }
+
+    .bucket-features-new {
+        font-size: 0.9em;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        color: #fff; /* Características en blanco */
+        padding-left: 0; /* Elimina indentación */
+        list-style: none; /* Quita los puntos de la lista */
+        transform: translateX(0); /* Alinea toda la lista con translate */
+        text-align: left; /* Asegura alineación a la izquierda */
+    }
+
+    .bucket-features-new li {
+        margin: 0; /* Sin márgenes adicionales */
+        text-align: left; /* Alinea cada elemento a la izquierda */
+        transform: translateX(0) !important; /* Elimina el efecto escalera */
+        color: #fff; /* Texto en blanco */
+    }
+
+    /* Círculos de colores */
+    .colors-title-new {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+        text-align: left;
+        transform: translateX(0); /* Alinea el título de colores */
+        color: #fff; /* Texto en blanco */
+    }
+
+    .bucket-colors-new {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start; /* Alinea los colores a la izquierda */
+    }
+
+    .color-new {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+    }
+
+    .color-green {
+        background-color: #008000;
+    }
+
+    .color-yellow {
+        background-color: #FFD700;
+    }
+
+    .color-red {
+        background-color: #FF0000;
+    }
+}
